@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chrome Screen Recorder</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/uwtech.css">
+    <link rel='stylesheet' href='css/sweetalert2.min.css'>
+    <script src="js/sweetalert2.all.min.js"></script>
+</head>
+<body>
+
+    <fieldset style="margin: 10px;">
+        <legend>Recording options</legend>
+
+        <div>
+            <input type="checkbox" id="r_download" name="r_download" checked>
+            <label for="r_download">Download video when recording done.</label>
+        </div>
+
+        <div>
+            <input type="checkbox" id="r_stream" name="r_stream">
+            <label for="r_stream">Stream recording to websocket</label>
+        </div>
+
+        <div id="ws_settings" style="display: none;">
+            <input id="r_ws" name="r_ws" placeholder="ws://127.0.0.1:12345">
+            <label for="r_ws">Websocket url</label>
+        </div>
+    </fieldset>
+
+    <p><button class="b btn btn--wide btn--success" id="start">Start Capture</button></p>
+    <p><button class="b btn btn--wide btn--error" id="stop">Stop Capture</button></p>
+
+    <br>
+    <p style="text-align: center;"><strong>Preview</strong></p>
+    <video id="preview-video" autoplay class="preview" poster="img/no_input.jpg" title="Preview"></video>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
